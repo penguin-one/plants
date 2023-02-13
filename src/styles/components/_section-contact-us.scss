@@ -1,0 +1,237 @@
+.section-fifth {
+  padding-top: 53px;
+  @include media-tablet {
+    padding-top: 40px;
+  }
+  @include media-mobilesmall {
+    padding-top: 25px;
+  }
+
+  .wrapper-contacts {
+    position: relative;
+  }
+
+  .img-woman {
+    @include flex();
+    @include media-tablet {
+      margin-left: 19px;
+    }
+    @include media-mobilesmall {
+      margin-left: 0;
+    }
+    @include media-custom380 {
+      order: 0;
+    }
+
+    .img-woman-bottom {
+      @include media-tablet {
+        width: 200px;
+      }
+      @include media-mobilesmall {
+        width: 100px;
+      }
+    }
+  }
+
+  .text__header3 {
+    padding-top: 7px;
+    padding-left: 46px;
+    font-family: $font-headers;
+    font-size: 40px;
+    line-height: 52px;
+    color: $headers-highlighted;
+    @include media-tablet {
+      padding-top: 0;
+      padding-left: 0;
+    }
+    @include media-mobilesmall {
+      font-size: 25px;
+      line-height: 33px;
+    }
+    @include media-custom380 {
+      order: 3;
+    }
+  }
+
+  #city-selected {
+    margin-top: 95px;
+    width: 450px;
+    height: 50px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    @include media-tablet {
+      margin-top: 99px;
+      margin-bottom: 250px;
+    }
+    @include media-custom {
+      width: 300px;
+    }
+    @include media-mobilesmall {
+      margin-top: 82px;
+      margin-bottom: 131px;
+    }
+    @include media-custom-small {
+      width: 250px;
+    }
+    @include media-custom380 {
+      margin-bottom: 49px;
+      order: 2;
+    }
+  }
+
+  .custom-select {
+    position: relative;
+  }
+
+  .custom-select select {
+    display: none;
+  }
+
+  .select-selected {
+    padding: 14px 0 14px 35px;
+    width: 450px;
+    height: 50px;
+    background-color: #D6E7D2;
+    @include media-custom {
+      width: 300px;
+    }
+    @include media-custom-small {
+      width: 250px;
+    }
+  }
+
+  .select-selected:after {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    width: 0;
+    height: 0;
+    content: url("../images/navigation/unactive.png");
+  }
+
+  .select-arrow-active {
+    background-color: #C1E698;
+  }
+
+  .select-selected.select-arrow-active:after {
+    top: 15px;
+    content: url("../images/navigation/active.png");
+  }
+
+  .select-items div,
+  .select-selected {
+    color: #717171;
+    border-bottom: 1px solid #D9D9D9;
+    cursor: pointer;
+  }
+
+  .select-items {
+    position: absolute;
+    padding: 27px 0 31px 0;
+    background-color: #DCE9D9;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+  }
+
+  .select-hide {
+    display: none;
+  }
+
+  .select-items div {
+    margin: 0 35px;
+    color: #499A18;
+    font-size: 16px;
+    line-height: 40px;
+    margin-bottom: 12px;
+  }
+
+  .select-items div:last-child {
+    margin-bottom: 0;
+  }
+
+  .select-items div:hover,
+  .same-as-selected {
+    color: #717171;
+    border-bottom: 1px solid #717171;
+  }
+
+  .option-selected {
+    position: absolute;
+    bottom: 100px;
+    right: 1px;
+    width: 448px;
+    padding: 17px 76px 32px 33px;
+    background: #EDF2EC;
+    border: 1px solid $color-black;
+    border-radius: 20px;
+    @include media-custom-large {
+      width: 364px;
+    }
+    @include media-tablet {
+      width: 448px;
+      right: 21%;
+      bottom: 262px;
+    }
+    @include media-custom580 {
+      width: 320px;
+      right: 1px;
+      bottom: 140px;
+    }
+    @include media-custom380 {
+      position: static;
+      width: 282px;
+      padding: 23px 36px;
+      order: 1;
+    }
+
+    .option-selected__content {
+      @include flex($direction: column);
+      font-size: 16px;
+      line-height: 40px;
+      color: #717171;
+      @include media-custom380 {
+        line-height: 20px;
+      }
+    }
+
+    .option-selected__details {
+      @include flex($wrap: nowrap);
+    }
+
+    .option-selected__items {
+      margin-right: 10px;
+      color: $color-black;
+      @include media-custom380 {
+        width: 88px;
+        margin-right: 0;
+      }
+    }
+
+    .option-selected__items > p,
+    .option-selected__description > p {
+      @include media-custom380 {
+        padding-bottom: 18px;
+      }
+    }
+
+    .option-selected__button {
+      text-align: center;
+    }
+
+    .option-selected__btn {
+      padding: 7px 40px;
+      display: inline-block;
+      font-family: $font-headers;
+      font-weight: 700;
+      font-size: 10px;
+      line-height: 13px;
+      color: #717171;
+      border-radius: 5px;
+    }
+
+    .option-selected__btn:hover {
+      color: $color-white;
+    }
+  }
+}

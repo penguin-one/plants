@@ -1,0 +1,52 @@
+.footer {
+  background-color: $background-color-section;
+  padding: 49px 0;
+  @include media-tablet {
+    padding-top: 29px;
+  }
+  @include media-mobilesmall {
+    padding: 19px 0 0;
+  }
+
+  .copyright-year-github,
+  .rs-school {
+    padding-top: 5px;
+  }
+
+  .copyright-year-github {
+    color: $color-black;
+
+    .year {
+      margin: 0 15px;
+    }
+  }
+
+  .rs-school {
+    margin-left: 15px;
+    @include media-tablet {
+      margin-left: 0;
+      margin-bottom: 25px;
+      padding-top: 17px;
+    }
+    @include media-mobilesmall {
+      margin-bottom: 11px;
+    }
+  }
+
+  .social-media {
+    .social-media__link {
+      margin-right: 14px;
+    }
+
+    .social-media__link:last-child {
+      margin-right: 0;
+    }
+
+    svg:hover {
+      path {
+        fill: $color-orange;
+        @extend %transition;
+      }
+    }
+  }
+}

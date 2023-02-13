@@ -1,0 +1,34 @@
+.hamburger {
+  display: none;
+  width: 40px;
+  height: 24px;
+  cursor: pointer;
+  @include media-mobilesmall {
+    display: inline-block;
+  }
+}
+
+.hamburger__line {
+  display: block;
+  margin-bottom: 6px;
+  width: 100%;
+  border: 1px solid $additional-color;
+  transition: all 0.4s;
+}
+
+.hamburger-line:last-child {
+  margin-bottom: 0;
+}
+
+.change .hamburger__line_0 {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change .hamburger__line_1,
+.change .hamburger__line_2 {
+  opacity: 0;
+}
+
+.change .hamburger__line_3 {
+  transform: translate(0, -11px) rotate(45deg);
+}

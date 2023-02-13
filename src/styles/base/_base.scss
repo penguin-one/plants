@@ -1,0 +1,76 @@
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: $font-common;
+  color: $primary-color;
+  background: $background-color;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+p, h1, h2, h3, h4 {
+  margin: 0;
+}
+
+h1 {
+  font-family: $font-headers;
+  color: $color-black;
+}
+
+a {
+  text-decoration: none;
+  color: $link-nav;
+  @extend %transition;
+}
+
+a:hover, a:active, a:focus {
+  color: $link-selected;
+}
+
+.text__header2 {
+  color: $headers-color;
+  font-weight: 700;
+  font-size: 45px;
+  margin-top: 0;
+  margin-bottom: 42px;
+  line-height: 50px;
+  @include media-tablet {
+    font-size: 35px;
+    line-height: 50px;
+    margin-bottom: 32px;
+  }
+
+  &-colored {
+    color: $headers-highlighted;
+  }
+}
+
+.text__header3 {
+  font-family: $font-headers;
+  font-size: 40px;
+  line-height: 52px;
+  color: $color-orange;
+
+  &-colored {
+    color: $headers-highlighted;
+  }
+}
+
+.overlay {
+  position: fixed;
+  display: none;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.5);
+}

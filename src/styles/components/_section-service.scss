@@ -1,0 +1,165 @@
+.section-third {
+  padding-top: 40px;
+  margin-bottom: 67px;
+  @include media-tablet {
+    padding-top: 60px;
+    margin-bottom: 32px;
+  }
+  @include media-mobilesmall {
+    padding-top: 30px;
+    margin-bottom: 0;
+  }
+
+  .wrapper {
+    flex-direction: column;
+
+    .section-third__header {
+      align-items: center;
+      margin-bottom: 79px;
+      @include flex();
+      @include media-tablet {
+        margin-bottom: 20px;
+      }
+      @include media-mobilesmall {
+        margin-bottom: 10px;
+      }
+    }
+
+    .section-third__list {
+      font-family: $font-headers;
+      list-style-type: none;
+      line-height: 26px;
+      color: $color-orange;
+      padding-top: 4px;
+      @include flex();
+      @include media-tablet {
+        padding-top: 22px;
+        padding-left: 0;
+      }
+      @include media-mobilesmall {
+        padding-top: 18px;
+      }
+
+      .section-third__list__li {
+        width: 161px;
+        height: 50px;
+        border: 1px solid $border-color;
+        border-radius: 5px;
+        padding: 12px 40px;
+        margin-right: 38px;
+        text-align: center;
+        cursor: pointer;
+        @extend %transition;
+        @include media-mobilesmall {
+          width: 121px;
+          height: 35px;
+          margin-right: 10px;
+          margin-bottom: 9px;
+          padding: 7px 28px;
+          font-size: 15px;
+          line-height: 20px;
+        }
+
+        .section-third__list__li:last-child {
+          margin-right: 0;
+        }
+
+        &:hover {
+          background: $link-selected;
+          color: $color-white;
+        }
+
+        &.tag_selected {
+          background: $link-selected;
+          color: $color-white;
+        }
+      }
+    }
+
+    .text__header3 {
+      max-width: 306px;
+      margin: 0 102px 0 0;
+      font-weight: 400;
+      color: $headers-highlighted;
+      @include media-tablet {
+        margin: 0;
+        font-size: 35px;
+        line-height: 46px;
+      }
+      @include media-mobilesmall {
+        max-width: 187px;
+        font-size: 25px;
+        line-height: 33px;
+      }
+    }
+
+    .section-third__content {
+      justify-content: space-between;
+      @include flex();
+      @include media-mobilesmall {
+        justify-content: center;
+      }
+
+      .content-item {
+        max-width: 330px;
+        align-items: center;
+        border: 1px solid $border-color-prices;
+        border-radius: 20px;
+        margin-right: 1px;
+        margin-bottom: 53px;
+        transition: filter 1s;
+        @include flex($direction: column);
+        @include media-tablet {
+          max-width: 280px;
+          margin-bottom: 19px;
+        }
+        @include media-mobilesmall {
+          margin-bottom: 31px;
+        }
+
+        .content-item__img {
+          border-radius: 20px 20px 0 0;
+          cursor: pointer;
+          @include media-tablet {
+            width: 280px;
+          }
+        }
+
+        .text__header4 {
+          font-weight: 700;
+          line-height: 20px;
+          color: $color-orange;
+          padding-top: 5px;
+          margin-bottom: 14px;
+          @include media-tablet {
+            padding-top: 4px;
+            margin-bottom: 12px;
+          }
+        }
+
+        .text__desc {
+          font-size: 16px;
+          line-height: 20px;
+          color: $additional-color;
+          margin-bottom: 36px;
+          @include media-tablet {
+            max-width: 203px;
+            text-align: center;
+          }
+          @include media-mobilesmall {
+            margin-bottom: 20px;
+          }
+        }
+
+        &_blur {
+          filter: blur(2px);
+        }
+      }
+      .content-item:last-child {
+        @include media-mobilesmall {
+          margin-bottom: 25px;
+        }
+      }
+    }
+  }
+}
